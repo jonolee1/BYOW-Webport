@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Own World - Web Port</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Build Your Own World</h1>
+        
+        <div id="menu" class="menu">
+            <div class="menu-options">
+                <button id="new-game-btn" class="menu-button">New Game (N)</button>
+                <button id="load-game-btn" class="menu-button">Load Game (L)</button>
+                <button id="quit-btn" class="menu-button">Quit (Q)</button>
+            </div>
+            
+            <div id="seed-input" class="seed-input hidden">
+                <label for="seed">Enter seed:</label>
+                <input type="number" id="seed" placeholder="Enter a number">
+                <button id="start-game-btn">Start Game (S)</button>
+            </div>
+        </div>
+        
+        <div id="game-container" class="game-container hidden">
+            <canvas id="game-canvas" width="1280" height="640"></canvas>
+            <div style="display: none;">
+                <span id="tile-info">Tile: </span>
+                <span id="date-time">Date: </span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Instructions outside the game area -->
+    <div class="instructions">
+        <h3>Controls (Exact Java Port)</h3>
+        <div class="control-section">
+            <h4>Menu Navigation:</h4>
+            <ul>
+                <li><strong>N</strong> - New World (Random)</li>
+                <li><strong>S</strong> - New World (Custom Seed)</li>
+                <li><strong>L</strong> - Load Game</li>
+                <li><strong>R</strong> - Replay Game</li>
+                <li><strong>Q</strong> - Quit</li>
+            </ul>
+        </div>
+        <div class="control-section">
+            <h4>Seed Input:</h4>
+            <ul>
+                <li><strong>0-9</strong> - Type seed numbers</li>
+                <li><strong>S or Enter</strong> - Start game with seed</li>
+            </ul>
+        </div>
+        <div class="control-section">
+            <h4>In Game:</h4>
+            <ul>
+                <li><strong>W A S D</strong> - Move avatar</li>
+                <li><strong>: then Q</strong> - Save and quit to menu</li>
+                <li><strong>Mouse hover</strong> - Show tile information</li>
+            </ul>
+        </div>
+        <p><em>Note: Click on the game canvas area first to ensure keyboard input works properly.</em></p>
+    </div>
+    
+    <script src="world.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
